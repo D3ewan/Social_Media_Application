@@ -1,0 +1,23 @@
+.App {
+  transition: background-color 0.3s ease;
+
+  &.dark-mode {
+    --color-background: #181a1e;
+    --color-white: #202528;
+    --color-dark: #edeffd;
+    --color-dark-variant: #a3bdcc;
+    --color-light: rgba(0, 0, 0, 0.4);
+    --box-shadow: 0 2rem 3rem var(--color-light);
+  }
+  
+}
+@media screen and (max-width: 768px) {
+  .App {
+
+    .dark-mode-toggle {
+      top: 18px;
+    right: 50%;
+    transform: translateX(50%);
+    }
+  }
+}

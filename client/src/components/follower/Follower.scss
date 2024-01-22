@@ -1,0 +1,53 @@
+
+.Follower {
+    background: var(--color-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius-3);
+    padding: 1.1rem var(--card-padding);
+  
+    .userInfo {
+      display: flex;
+      align-items: center;
+      color: var(--color-dark);
+  
+      .name {
+        margin-left: var(--padding-1);
+      }
+    }
+  
+    .follow-link {
+      margin-left: auto;
+      padding: 0.5rem 1rem;
+      background-color: var(--color-primary);
+      color: var(--color-white);
+      border: none;
+      border-radius: var(--border-radius-1);
+      cursor: pointer;
+  
+      &:hover {
+        background-color: var(--color-dark);
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .Follower {
+      height: 3.5rem;
+      width: 3.5rem;
+      border-radius: 100%;
+      box-shadow: none;
+      padding: 1rem;
+    }
+    .userInfo{
+      .name {
+        display: none;
+      }
+    }
+    .follow-link{
+      display: none;
+    }
+  }
+  

@@ -1,0 +1,130 @@
+// UpdateProfile.scss
+
+.UpdateProfile {
+  background-color: var(--color-background);
+  height: calc(100vh - 4.6rem);
+  padding: var(--card-padding);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .container {
+    display: flex;
+    gap: 2.5rem;
+    width: 80%;
+    height: 100%;
+  }
+
+  .left-part {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+
+    .image-container {
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 11rem;
+      height: 11rem;
+      margin-block: 1rem;
+      overflow: hidden;
+      box-shadow: var(--box-shadow);
+
+      input{
+        display: none;
+      }
+
+      &:hover {
+        box-shadow: none;
+      }
+    }
+    img {
+      border-radius: 50%;
+      cursor: pointer;
+      object-fit: cover;
+    }
+  }
+
+  .right-part {
+    flex: 2;
+    padding-right: 10%;
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.8rem;
+      background-color: var(--color-white);
+      border-radius: var(--border-radius-1);
+      padding: var(--card-padding);
+      box-shadow: var(--box-shadow);
+      border: 1px solid var(--color-white);
+      padding: 1rem;
+      margin-block: 1rem;
+
+      input {
+        padding: var(--padding-1);
+        border-radius: var(--border-radius-1);
+        background-color: var(--color-white);
+        box-shadow: 0px 0px 0px var(--color-background),
+          inset 3px 3px 3px var(--color-background);
+        color: var(--color-dark);
+        &:focus {
+          outline: none;
+          border-color: var(--color-primary);
+        }
+
+        &:nth-last-child(1) {
+          box-shadow: none;
+          margin-bottom: 0;
+          width: fit-content;
+          padding-inline: 2rem;
+        }
+
+        &::placeholder {
+          color: var(--color-info-dark);
+        }
+      }
+
+      .submit {
+        padding: var(--padding-1);
+        background-color: var(--color-primary);
+        color: var(--color-white);
+        border: none;
+        border-radius: var(--border-radius-1);
+        display: inline;
+        cursor: pointer;
+
+        &:hover {
+          background-color: var(--color-dark);
+        }
+      }
+    }
+    .delete-button {
+      padding: var(--padding-1);
+      background-color: var(--color-danger);
+      color: var(--color-white);
+      border: none;
+      border-radius: var(--border-radius-1);
+      cursor: pointer;
+      display: inline-block;
+
+      &:hover {
+        background-color: var(--color-dark);
+      }
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .UpdateProfile {
+
+    .container {
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .right-part{
+      padding: 0;
+    }
+  }
+}

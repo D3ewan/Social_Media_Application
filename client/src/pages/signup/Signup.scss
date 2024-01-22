@@ -1,0 +1,105 @@
+.Signup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: var(--color-background);
+  color: var(--color-dark);
+  font-family: "Poppins", sans-serif;
+
+  h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+
+    span {
+      color: var(--color-primary);
+    }
+  }
+
+  .signup-box {
+    background-color: var(--color-white);
+    border-radius: var(--card-border-radius);
+    padding: var(--card-padding);
+    box-shadow: var(--box-shadow);
+    width: 350px;
+
+    .heading {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: var(--color-dark);
+      text-align: center;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+
+      label {
+        margin-bottom: 0.5rem;
+        color: var(--color-dark);
+      }
+
+      input {
+        padding: 10px;
+        margin-bottom: 0.5rem;
+        // border: 1px solid var(--color-dark-variant);
+        border-radius: var(--border-radius-1);
+        background-color: var(--color-white);
+        box-shadow: 1px 1px 0px var(--color-background),
+          inset 3px 3px 3px var(--color-background);
+        color: var(--color-dark);
+        &:focus {
+          outline: none;
+          border-color: var(--color-primary);
+        }
+
+        &:nth-last-child(1) {
+            box-shadow: none;
+          margin-top: 1rem;
+          margin-bottom: 0;
+        }
+      }
+
+      input[type="submit"] {
+        background-color: var(--color-primary);
+        color: var(--color-dark);
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+    }
+  }
+  .subheading {
+    text-align: center;
+    font-size: 0.87rem;
+    margin-top: 1rem;
+    color: var(--color-info-dark);
+
+    a {
+      color: var(--color-primary);
+      text-decoration: underline;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .Signup {
+    .signup-box {
+      width: 80%;
+    }
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .Signup {
+    .h2 {
+      font-size: 1.5rem;
+    }
+
+    .signup-box {
+      width: 90%;
+    }
+  }
+}

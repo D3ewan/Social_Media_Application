@@ -1,0 +1,12 @@
+.Avatar {
+  cursor: pointer;
+  transition: all ease 100ms;
+  img{
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  &:hover {
+    font-size: 3.1rem;
+  }
+}
