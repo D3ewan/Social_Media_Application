@@ -1,8 +1,10 @@
-const Post = require("../models/Post");
-const User = require("../models/User");
-const { mapPostOutput } = require("../utils/mapPostOutput");
-const { error, success } = require("../utils/responseWrapper");
-const cloudinary = require('cloudinary').v2;
+// const Post = require("../models/Post");
+// const User = require("../models/User");
+// const { mapPostOutput } = require("../utils/mapPostOutput");
+import { error, success } from "../utils/responseWrapper";
+import Cloudinary from 'cloudinary';
+const cloudinary=Cloudinary.v2;
+
 
 const followOrUnfollowUserController = async (req, res) => {
     try {
@@ -192,7 +194,7 @@ const getUserProfileController = async (req, res) => {
     
 };
 
-module.exports = {
+export {
     updateUserProfileController,
     getMyInfoController,
     getUserPostsController,

@@ -1,8 +1,8 @@
-const Post = require("../models/Post")
-const User = require("../models/User")
-const { success, error } = require("../utils/responseWrapper")
+// import Post = require("../models/Post")
+// import User from "../models/User"
+import { success, error } from "../utils/responseWrapper";
 const cloudinary = require('cloudinary').v2;
-const { mapPostOutput } = require("../utils/mapPostOutput");
+// const { mapPostOutput } = require("../utils/mapPostOutput");
 
 const createPostController = async (req, res) => {
     try {
@@ -117,7 +117,7 @@ const deletePostControlller = async (req, res) => {
     }
 }
 
-module.exports = {
+export  {
     deletePostControlller,
     createPostController,
     likeAndUnlikePostController,

@@ -1,6 +1,6 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 
-module.exports = async () => {
+export default  async () => {
     const url = `mongodb+srv://${process.env.MONGOOSE_ID}:${process.env.MONGOOSE_PASSWORD}@cluster0.ygxeoeu.mongodb.net/SocialMedia?retryWrites=true&w=majority`;
     try {
         await mongoose.connect(url)

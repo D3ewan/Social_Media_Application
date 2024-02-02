@@ -1,7 +1,7 @@
-const bcrypt = require('bcrypt');
-const User = require('../models/User');
-const jwt = require('jsonwebtoken');
-const { error, success } = require('../utils/responseWrapper');
+import bcrypt from 'bcrypt';
+// import User from '../models/User';
+import jwt from 'jsonwebtoken';
+import { error, success } from '../utils/responseWrapper';
 
 const signupController = async (req, res) => {
     try {
@@ -117,4 +117,4 @@ const generateAccessToken = (user) => {
     }
 }
 
-module.exports = { loginController, signupController, refreshAccessTokenController, logoutController }
+export { loginController, signupController, refreshAccessTokenController, logoutController }

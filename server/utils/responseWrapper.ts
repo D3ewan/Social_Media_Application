@@ -14,4 +14,4 @@ const error=(statusCode, message)=>{
     }
 }
 
-module.exports = {success, error}
+export {success, error}

@@ -15,4 +15,4 @@ const mapPostOutput = (post, userId) => {
     }
 }
 
-module.exports = {mapPostOutput}
+export {mapPostOutput}
